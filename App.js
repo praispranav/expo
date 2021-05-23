@@ -7,7 +7,6 @@ import AuthNavigator from './app/navigation/AuthNavigator';
 import NavigationTheme from './app/navigation/NavigationTheme';
 
 
-
 export default function App() {
   const [loaded] = useFonts({
     "Poppins-Light": require("./app/fonts/Poppins-Light.ttf"),
