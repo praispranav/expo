@@ -5,11 +5,8 @@ import {
   TouchableOpacity,
   Image,
   TouchableHighlight,
-  StyleSheet
 } from 'react-native'
-
-import Colors from '../config/colors';
-import Wrapper from '../components/Wrapper';
+import Colors from '../config/colors'
 
 const PinScreen = (props) => {
   const [value, setValue] = useState('')
@@ -38,7 +35,6 @@ const PinScreen = (props) => {
     }
 
     return (
-    
       <TouchableHighlight
         activeOpacity={0.9}
         underlayColor='#DDDDDD'
@@ -70,9 +66,8 @@ const PinScreen = (props) => {
   }
 
   return (
-    <Wrapper>
-    <View style={styles.container}>
-      <View style={{ alignItems: 'center', marginTop: 40 }}>
+    <View style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
+      <View style={{ alignItems: 'center', marginTop: 20 }}>
         <Image
           source={require('../assets/images/logo.png')}
           style={{ width: 150, height: 150 }}
@@ -192,7 +187,7 @@ const PinScreen = (props) => {
               onPress={() => {
                 if (value.length === 5) {
                   //props.navigation.navigate('ForumCategories')
-                  props.navigation.navigate('MainNavigator')
+                  props.navigation.navigate("MainNavigator")
                 }
               }}
               style={{
@@ -226,16 +221,7 @@ const PinScreen = (props) => {
         </View>
       </View>
     </View>
-
-    </Wrapper>
   )
 }
-const styles = StyleSheet.create({
-  container:{
-    paddingBottom:20,
-    flex: 1, 
-    backgroundColor: '#FFFFFF',
- 
-  }
-})
+
 export default PinScreen

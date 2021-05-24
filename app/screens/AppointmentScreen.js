@@ -38,10 +38,10 @@ export default class AppointmentScreen extends Component {
           </Text>
         </View>
         <View style={styles.formBox}>
-          <SelectBox label="Choose Hospital" />
+          <SelectBox label="Choose Clinic/Hospital" />
           <SelectBox label="Dr.Amanda" />
           <SelectBox label="Book Time" />
-          <SelectBox label="Complain" />
+          <SelectBox label="Complaint" />
         </View>
         <View style={[CommonStyles.buttonBox, { marginBottom: 30 }]}>
           <GradientButton

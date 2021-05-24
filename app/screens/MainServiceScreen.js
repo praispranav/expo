@@ -14,6 +14,7 @@ import CommonStyles, {
 import MenuItemBox from "../components/MenuItemBox"
 import CustomTabBar from "../components/CommonTabBar"
 import GradientNavigationBar from "../elements/GradientNavigationBar"
+import { ScrollView } from "react-native"
 
 export default class MainServiceScreen extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ export default class MainServiceScreen extends Component {
     }
 
     return (
+      <ScrollView>
       <View style={CommonStyles.normalPage}>
         <GradientNavigationBar
           navigation={this.props.navigation}
@@ -90,9 +92,25 @@ export default class MainServiceScreen extends Component {
               boxIconHeight={26}
               onPressBoxItem={this._handleClickAppointment.bind(this)}
             />
+               <MenuItemBox
+              boxTitle="Appointment"
+              boxSubTitle="59 available"
+              boxIcon={require("./../assets/img/healer/medicineBookIcon.png")}
+              boxIconWidth={20}
+              boxIconHeight={26}
+              onPressBoxItem={this._handleClickAppointment.bind(this)}
+            />
           </View>
           <View style={styles.colMainRight}>
             <MenuItemBox
+              boxTitle="Find Hospital"
+              boxSubTitle="269 hospital"
+              boxIcon={require("./../assets/img/healer/hospital.png")}
+              boxIconWidth={26}
+              boxIconHeight={25}
+             // onPressBoxItem={this._handleClickFindHospital.bind(this)}
+            />
+              <MenuItemBox
               boxTitle="Find Hospital"
               boxSubTitle="269 hospital"
               boxIcon={require("./../assets/img/healer/hospital.png")}
@@ -112,6 +130,7 @@ export default class MainServiceScreen extends Component {
         </View>
         <CustomTabBar navigation={this.props.navigation} isActive="tab0" />
       </View>
+      </ScrollView>
     )
   }
 
