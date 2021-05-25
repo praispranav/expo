@@ -130,8 +130,8 @@ export default class MainServiceScreen extends Component {
               />
             </View>
           </View>
-          <CustomTabBar navigation={this.props.navigation} isActive="tab0" />
         </ScrollView>
+        <CustomTabBar navigation={this.props.navigation} isActive="tab0" />
       </Wrapper>
     );
   }
