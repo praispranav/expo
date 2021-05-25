@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 
-import AuthNavigator from './app/navigation/AuthNavigator';
+import AuthNavigator from "./app/navigation/AuthNavigator";
 //import AppNavigator from './app/navigation/AppNavigator';
-import NavigationTheme from './app/navigation/NavigationTheme';
-
+import NavigationTheme from "./app/navigation/NavigationTheme";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -17,15 +16,14 @@ export default function App() {
     "Roboto-Bold": require("./app/fonts/Roboto-Bold.ttf"),
     "Roboto-Black": require("./app/fonts/Roboto-Black.ttf"),
   });
-  
+
   if (!loaded) {
     return null;
   }
 
   return (
     <NavigationContainer theme={NavigationTheme}>
-    <AuthNavigator />
-   
-  </NavigationContainer>
+      <AuthNavigator />
+    </NavigationContainer>
   );
 }
