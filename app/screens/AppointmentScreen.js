@@ -17,11 +17,33 @@ export default class AppointmentScreen extends Component {
 
   render() {
     return (
-      <Wrapper>
-        <View style={CommonStyles.normalPage}>
-          <GradientNavigationBar
-            navigation={this.props.navigation}
-            titleText="Appointment"
+      <View style={CommonStyles.normalPage}>
+        <GradientNavigationBar
+          navigation={this.props.navigation}
+          titleText="Appointment"
+        />
+        <View style={CommonStyles.screenTitleBox}>
+          <Text
+            style={[
+              CommonStyles.titleText,
+              CommonStyles.lightgreyColor,
+              CommonStyles.extraBold,
+            ]}
+          >
+            CREATE AN APPOINTMENT.
+          </Text>
+        </View>
+        <View style={styles.formBox}>
+          <SelectBox label="Choose Clinic/Hospital" />
+          <SelectBox label="Dr.Amanda" />
+          <SelectBox label="Book Time" />
+          <SelectBox label="Complaint" />
+        </View>
+        <View style={[CommonStyles.buttonBox, { marginBottom: 30 }]}>
+          <GradientButton
+            onPressButton={this._handleAddAppointment.bind(this)}
+            setting={shadowOpt}
+            btnText="ADD APPOINTMENT"
           />
           <View style={CommonStyles.screenTitleBox}>
             <Text
@@ -48,7 +70,6 @@ export default class AppointmentScreen extends Component {
             />
           </View>
         </View>
-      </Wrapper>
     );
   }
 
