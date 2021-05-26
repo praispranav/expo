@@ -90,12 +90,12 @@ export default class MainServiceScreen extends Component {
                   onPressBoxItem={this._handleClickAppointment.bind(this)}
                 />
                 <MenuItemBox
-                  boxTitle="Appointment"
+                  boxTitle="Scheduler"
                   boxSubTitle="59 available"
                   boxIcon={require("./../assets/img/healer/medicineBookIcon.png")}
                   boxIconWidth={20}
                   boxIconHeight={26}
-                  onPressBoxItem={this._handleClickAppointment.bind(this)}
+                  onPressBoxItem={this._handleClickScheduler.bind(this)}
                 />
               </View>
               <View style={styles.colMainRight}>
@@ -139,6 +139,10 @@ export default class MainServiceScreen extends Component {
   // Go to AppointmentScreen
   _handleClickAppointment() {
     this.props.navigation.push("AppointmentScreen");
+  }
+
+  _handleClickScheduler() {
+    this.props.navigation.push("CalendarScreen");
   }
 
   _handleClickNotificationButton() {
