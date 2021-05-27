@@ -11,7 +11,8 @@ const LoginScreen = (props) => {
 
   const SignInButtonHandler = () => {
     if (toggleCheckbox === true) {
-      props.navigation.navigate('ForumCategories')
+      //props.navigation.navigate('ForumCategories')
+      props.navigation.navigate('MainNavigator')
     }
   }
 

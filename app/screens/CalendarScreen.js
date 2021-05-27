@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import { Alert, StyleSheet, Text, View, TouchableOpacity } from "react-native";
+
 import { Agenda } from "react-native-calendars";
 import Wrapper from "../components/Wrapper";
 import GradientNavigationBar from "../elements/GradientNavigationBar";
 import colors from "../config/colors";
-import CommonStyles, {
-  deviceWidth,
-  deviceHeight,
-  blueGradient,
-  NAV_HEIGHT,
-} from "../config/CommonStyles";
+import { deviceWidth, deviceHeight, NAV_HEIGHT } from "../config/CommonStyles";
 
 export default class AgendaScreen extends Component {
   constructor(props) {
