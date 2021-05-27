@@ -19,7 +19,7 @@ const Stack = createStackNavigator();
 
 const AuthNavigator = () => (
   <Stack.Navigator
-    initialRouteName="MainNavigator"
+    initialRouteName="CalendarScreen"
     screenOptions={{ headerShown: false }}
   >
     <Stack.Screen name="PinScreen" component={PinScreen} />

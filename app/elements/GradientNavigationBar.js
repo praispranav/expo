@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 import {
   StyleSheet,
   Text,
@@ -6,20 +6,20 @@ import {
   Image,
   Platform,
   TouchableOpacity,
-} from "react-native"
-import { LinearGradient } from "expo-linear-gradient"
-import Icon from "react-native-vector-icons/Ionicons"
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import Icon from "react-native-vector-icons/Ionicons";
 
 import CommonStyles, {
   deviceWidth,
   deviceHeight,
   blueGradient,
   NAV_HEIGHT,
-} from "../config/CommonStyles"
+} from "../config/CommonStyles";
 
 export default class GradientNavigationBar extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -40,7 +40,7 @@ export default class GradientNavigationBar extends Component {
         fontSize: this.props.titleTextStyle.fontSize,
         fontFamily: this.props.titleTextStyle.fontFamily,
       },
-    })
+    });
 
     return (
       <View>
@@ -64,7 +64,7 @@ export default class GradientNavigationBar extends Component {
                       />
                     </View>
                   </TouchableOpacity>
-                )
+                );
               } else {
                 return (
                   <TouchableOpacity
@@ -86,7 +86,7 @@ export default class GradientNavigationBar extends Component {
                       />
                     </View>
                   </TouchableOpacity>
-                )
+                );
               }
             })()}
           </View>
@@ -101,13 +101,13 @@ export default class GradientNavigationBar extends Component {
                       height: this.props.titleImgStyle.height,
                     }}
                   />
-                )
+                );
               } else {
                 return (
                   <Text style={privateStyles.titleText}>
                     {this.props.titleText}
                   </Text>
-                )
+                );
               }
             })()}
           </View>
@@ -139,17 +139,17 @@ export default class GradientNavigationBar extends Component {
           </View>
         </LinearGradient>
       </View>
-    )
+    );
   }
 
   // Handle click menu button
   _onClickMenuButton() {
-    this.props.navigation.toggleDrawer()
+    this.props.navigation.toggleDrawer();
   }
 
   // Handle click back button
   _onClickBackButton() {
-    this.props.navigation.canGoBack() && this.props.navigation.goBack()
+    this.props.navigation.canGoBack() && this.props.navigation.goBack();
   }
 }
 
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
   },
-})
+});
 
 // const PropTypes = React.PropTypes;
 
@@ -218,4 +218,4 @@ GradientNavigationBar.defaultProps = {
     size: 28,
     color: "#FFFFFF",
   },
-}
+};
