@@ -22,7 +22,8 @@ export const blueGradient = {
 }
 
 // CommonStyles
-export default CommonStyles = StyleSheet.create({
+
+const CommonStyles = StyleSheet.create({
   androidSafeArea: {
     flex: 1,
     backgroundColor: "white",
@@ -255,4 +256,5 @@ export default CommonStyles = StyleSheet.create({
     right: 15,
     elevation: 12,
   },
-})
+});
+export default CommonStyles;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Alert, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
-import { Agenda } from "react-native-calendars";
+import { Agenda,Timeline } from "react-native-calendars";
 import Wrapper from "../components/Wrapper";
 import GradientNavigationBar from "../elements/GradientNavigationBar";
 import colors from "../config/colors";
@@ -19,6 +19,7 @@ export default class AgendaScreen extends Component {
             tasks: [
               {
                 time: "2 pm",
+            
                 task: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
               },
               {
@@ -126,13 +127,16 @@ export default class AgendaScreen extends Component {
         "2021-05-31": [
           {
             title: "Lorem Ipsum",
+        
             tasks: [
               {
-                time: "1 am",
+                time: "10:00AM - 10:45AM",
+              
                 task: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
               },
               {
-                time: "3 pm",
+              
+                time: "03:00PM - 03:45PM",
                 task: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
               },
             ],

@@ -19,7 +19,7 @@ const Stack = createStackNavigator();
 
 const AuthNavigator = () => (
   <Stack.Navigator
-    initialRouteName="CalendarScreen"
+    //initialRouteName="CalendarScreen"
     screenOptions={{ headerShown: false }}
   >
     <Stack.Screen name="PinScreen" component={PinScreen} />
@@ -35,7 +35,7 @@ const AuthNavigator = () => (
     <Stack.Screen name="StartWeightScreen" component={StartWeightScreen} />
     <Stack.Screen name="StartHeightScreen" component={StartHeightScreen} />
     <Stack.Screen name="UserProfileScreen" component={UserProfileScreen} />
-    <Stack.Screen name="CalendarScreen" component={CalendarScreen} />
+    {/* <Stack.Screen name="CalendarScreen" component={CalendarScreen} /> */}
     <Stack.Screen name="MainNavigator" component={MainNavigator} />
   </Stack.Navigator>
 );
